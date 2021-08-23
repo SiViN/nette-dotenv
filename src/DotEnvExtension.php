@@ -24,7 +24,7 @@ class DotEnvExtension extends CompilerExtension
         $id = 'env';
         $name = $config['prefix'] ? $this->prefix($id) : $id;
         $builder->addDefinition($name)
-            ->setClass($config['class'], array(
+            ->setFactory($config['class'], array(
                 'directory' => $config['directory'],
                 'fileName' => $config['fileName'],
                 'overload' => $config['overload'],
